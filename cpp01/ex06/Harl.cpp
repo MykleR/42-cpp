@@ -6,22 +6,11 @@
 /*   By: mrouves <mrouves@42angouleme.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:06:17 by mrouves           #+#    #+#             */
-/*   Updated: 2025/04/28 13:32:29 by mykle            ###   ########.fr       */
+/*   Updated: 2025/04/28 17:02:30 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
-
-int Harl::_filterLevel = -1;
-
-void Harl::setFilterLevel(std::string level) const
-{
-	for (int i = 0; i < LEVELS; i++)
-		if (this->_levels[i] == level)
-			this->_filterLevel = i;
-	if (this->_filterLevel == -1)
-		std::cout << "[ Probably complaining about insignificant problems ]\n";
-}
 
 void Harl::complain(const std::string level) const
 {
@@ -29,15 +18,14 @@ void Harl::complain(const std::string level) const
     for (; i < LEVELS; i++)
         if (this->_levels[i] == level)
             break; 
-	if (this->_filterLevel > i || this->_filterLevel == -1)
-		return ;
     switch (i)
 	{
-		case DEBUG:		debug(); break;
-		case INFO:		info(); break;
-		case WARNING:	warning(); break;
+		case DEBUG:		debug(); info(); warning(); error(); break;
+		case INFO:		info(); warning(); error(); break;
+		case WARNING:	warning(); error(); break;
 		case ERROR:		error(); break;
-		default: break;
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
     }
 }
 

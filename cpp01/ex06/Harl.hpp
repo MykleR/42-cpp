@@ -6,7 +6,7 @@
 /*   By: mrouves <mrouves@42angouleme.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:01:47 by mrouves           #+#    #+#             */
-/*   Updated: 2025/04/28 13:29:19 by mykle            ###   ########.fr       */
+/*   Updated: 2025/04/28 16:58:26 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class Harl
 {
 	public:
 		void complain(std::string level) const;
-		void setFilterLevel(std::string level) const;
 		static const int LEVELS = 4;
 	private:
 		void debug() const;
@@ -30,7 +29,6 @@ class Harl
 		void warning() const;
 		void error() const;
 
-		static int _filterLevel;
 		const std::string _levels[LEVELS] = {
 			"DEBUG", "INFO", "WARNING", "ERROR"};
 };
