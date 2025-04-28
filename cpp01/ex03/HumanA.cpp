@@ -6,17 +6,13 @@
 /*   By: mrouves <mrouves@42angouleme.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 18:04:12 by mrouves           #+#    #+#             */
-/*   Updated: 2025/04/11 18:04:40 by mrouves          ###   ########.fr       */
+/*   Updated: 2025/04/28 12:27:43 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 
 HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _weapon(weapon)
-{
-}
-
-HumanA::~HumanA()
 {
 }
 

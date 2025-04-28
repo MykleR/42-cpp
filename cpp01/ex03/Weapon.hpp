@@ -6,7 +6,7 @@
 /*   By: mrouves <mrouves@42angouleme.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 17:59:30 by mrouves           #+#    #+#             */
-/*   Updated: 2025/04/11 18:03:29 by mrouves          ###   ########.fr       */
+/*   Updated: 2025/04/28 12:27:09 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class Weapon
 		std::string _type;
 	public:
 		Weapon(std::string type);
-		~Weapon();
 		const std::string &getType() const;
 		void setType(std::string type);
 };

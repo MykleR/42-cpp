@@ -6,11 +6,11 @@
 #    By: mrouves <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 18:27:35 by mrouves           #+#    #+#              #
-#    Updated: 2025/04/11 17:58:33 by mrouves          ###   ########.fr        #
+#    Updated: 2025/04/28 12:27:59 by mykle            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 			:= main
+NAME 			:= ex03
 
 SOURCES			:= main.cpp \
 				   Weapon.cpp \

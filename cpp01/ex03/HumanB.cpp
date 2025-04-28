@@ -6,17 +6,13 @@
 /*   By: mrouves <mrouves@42angouleme.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 18:04:43 by mrouves           #+#    #+#             */
-/*   Updated: 2025/04/11 18:05:06 by mrouves          ###   ########.fr       */
+/*   Updated: 2025/04/28 12:27:29 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
 HumanB::HumanB(std::string name) : _name(name), _weapon(NULL)
-{
-}
-
-HumanB::~HumanB()
 {
 }
 

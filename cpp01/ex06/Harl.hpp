@@ -6,7 +6,7 @@
 /*   By: mrouves <mrouves@42angouleme.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 17:01:47 by mrouves           #+#    #+#             */
-/*   Updated: 2025/04/16 17:35:45 by mrouves          ###   ########.fr       */
+/*   Updated: 2025/04/28 13:29:19 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,37 +16,23 @@
 #include <iostream>
 #include <string>
 
+enum { DEBUG, INFO, WARNING, ERROR };
+
 class Harl
 {
-public:
-	Harl();
-	~Harl();
-	int getFilter() const;
-	void setFilter(std::string level);
-	void complain(std::string level);
-	
-	static const int LEVELS = 4;
+	public:
+		void complain(std::string level) const;
+		void setFilterLevel(std::string level) const;
+		static const int LEVELS = 4;
+	private:
+		void debug() const;
+		void info() const;
+		void warning() const;
+		void error() const;
 
-private:
-	void debug();
-	void info();
-	void warning();
-	void error();
-
-	int _filterLevel;
-	typedef void (Harl::*Log)();
-	const Harl::Log _funcs[LEVELS] = {
-		&Harl::debug,
-		&Harl::info,
-		&Harl::warning,
-		&Harl::error
-	};
-	const std::string _levels[LEVELS] = {
-		"DEBUG",
-		"INFO",
-		"WARNING",
-		"ERROR"
-	};
+		static int _filterLevel;
+		const std::string _levels[LEVELS] = {
+			"DEBUG", "INFO", "WARNING", "ERROR"};
 };
 
 #endif
