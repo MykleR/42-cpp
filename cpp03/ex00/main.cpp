@@ -6,7 +6,7 @@
 /*   By: mykle <mykle@42angouleme.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 18:43:00 by mykle             #+#    #+#             */
-/*   Updated: 2025/04/28 19:04:05 by mykle            ###   ########.fr       */
+/*   Updated: 2025/04/29 12:28:28 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,28 +26,34 @@ int main(void) {
     nb1.setAttackDamage(4);
     nb1.attack(nb2.getName());
     nb2.takeDamage(nb1.getAttackDamage());
+	std::cout << std::endl;
 
-    nb2.setAttackDamage(4);
+    nb2.setAttackDamage(6);
     nb2.attack(nb1.getName());
     nb1.takeDamage(nb2.getAttackDamage());
+	std::cout << std::endl;
 
 	std::cout << RED
               << nb1.getName()
               << " INVOKES THE POWER OF THE WATER BUCKET !!! \n"
               << "HOW COULD " << nb2.getName() << " ATTACK ?\n" << RESET;
 	nb1.beRepaired(4294967295);
-    nb2.setAttackDamage(4294967294);
+	std::cout << std::endl;
+
     std::cout << RED
               << nb2.getName()
               << " INVOKES THE POWER OF THE LALALALAVAAA CHICHICHICKENNN!!! \n"
               << "HOW COULD " << nb1.getName() << " SURVIVE ?\n" << RESET;
+    nb2.setAttackDamage(4294967294);
     nb2.attack(nb1.getName());
     nb1.takeDamage(nb2.getAttackDamage());
+	std::cout << std::endl;
+
 	nb1.setAttackDamage(10);
     nb1.attack(nb2.getName());
     nb2.takeDamage(nb1.getAttackDamage());
     nb2.attack(nb1.getName());
-    std::cout << RED << "THAT'S A WIN FOR " << nb1.getName() << "!!!!!" << RESET
+    std::cout << RED << "THAT'S A WIN FOR " << nb1.getName() << "!!!!!\n" << RESET
               << std::endl;
 
     return 0;

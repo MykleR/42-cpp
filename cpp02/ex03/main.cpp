@@ -6,7 +6,7 @@
 /*   By: mykle <mykle@42angouleme.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 17:10:33 by mykle             #+#    #+#             */
-/*   Updated: 2025/04/28 18:12:03 by mykle            ###   ########.fr       */
+/*   Updated: 2025/04/29 13:05:16 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int main(void)
 	Point b(1, 1);
 	Point c(2, 0);
 	Point point(2, 0.5f);
-	Point point2(1, 0.5f);
+	Point point2(.6f, 0.5f);
 	Point point3(1, 1);
 
 	std::cout << "Point A: " << a << std::endl;
