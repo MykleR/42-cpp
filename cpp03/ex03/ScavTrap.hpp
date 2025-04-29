@@ -6,7 +6,7 @@
 /*   By: mykle <mykle@42angouleme.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 13:10:45 by mykle             #+#    #+#             */
-/*   Updated: 2025/04/29 14:18:14 by mykle            ###   ########.fr       */
+/*   Updated: 2025/04/29 18:07:01 by mrouves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 	ScavTrap();
 	ScavTrap(const std::string &name);
 	ScavTrap(const ScavTrap &src);
-	virtual ~ScavTrap();
+	~ScavTrap();
 
 	ScavTrap &operator=(const ScavTrap &rhs);
 

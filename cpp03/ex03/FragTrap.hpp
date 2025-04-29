@@ -6,7 +6,7 @@
 /*   By: mykle <mykle@42angouleme.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 13:31:47 by mykle             #+#    #+#             */
-/*   Updated: 2025/04/29 14:17:59 by mykle            ###   ########.fr       */
+/*   Updated: 2025/04/29 18:07:10 by mrouves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ public:
 	FragTrap();
 	FragTrap(const std::string &name);
 	FragTrap(const FragTrap &src);
-	virtual ~FragTrap();
+	~FragTrap();
 
 	FragTrap &operator=(const FragTrap &rhs);
 

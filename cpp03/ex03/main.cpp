@@ -6,14 +6,15 @@
 /*   By: mykle <mykle@42angouleme.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 18:43:00 by mykle             #+#    #+#             */
-/*   Updated: 2025/04/29 14:12:33 by mykle            ###   ########.fr       */
+/*   Updated: 2025/04/29 18:16:58 by mrouves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
 
-int main(void) {
+int main(void)
+{
   DiamondTrap oui("ABOMINATION");
   std::cout << "DiamondTrap name: " << oui.getName() << std::endl;
   std::cout << "Hit points: " << oui.getHitPoints() << std::endl;
