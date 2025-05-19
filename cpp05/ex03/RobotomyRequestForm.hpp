@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykle <mykle@42angouleme.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 13:53:13 by mykle             #+#    #+#             */
-/*   Updated: 2025/05/19 18:25:25 by mykle            ###   ########.fr       */
+/*   Created: 2025/05/19 13:52:28 by mykle             #+#    #+#             */
+/*   Updated: 2025/05/19 14:04:19 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 #include "AForm.hpp"
 
-class ShrubberyCreationForm : public AForm
+class RobotomyRequestForm : public AForm
 {
 public:
-	ShrubberyCreationForm(std::string target);
-	ShrubberyCreationForm(const ShrubberyCreationForm &src);
-	~ShrubberyCreationForm();
+	RobotomyRequestForm(std::string target);
+	RobotomyRequestForm(const RobotomyRequestForm &src);
+	~RobotomyRequestForm();
 
-	ShrubberyCreationForm &operator=(const ShrubberyCreationForm &rhs);
+	RobotomyRequestForm &operator=(const RobotomyRequestForm &rhs);
 
 protected:
 	void Action() const;
@@ -29,5 +29,5 @@ protected:
 private:
 	std::string _target;
 
-	ShrubberyCreationForm();
+	RobotomyRequestForm();
 };

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mykle <mykle@42angouleme.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 13:53:13 by mykle             #+#    #+#             */
-/*   Updated: 2025/05/19 18:25:25 by mykle            ###   ########.fr       */
+/*   Created: 2025/05/19 13:45:40 by mykle             #+#    #+#             */
+/*   Updated: 2025/05/19 14:04:10 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,19 @@
 
 #include "AForm.hpp"
 
-class ShrubberyCreationForm : public AForm
+class PresidentialPardonForm : public AForm
 {
 public:
-	ShrubberyCreationForm(std::string target);
-	ShrubberyCreationForm(const ShrubberyCreationForm &src);
-	~ShrubberyCreationForm();
+	PresidentialPardonForm(std::string target);
+	PresidentialPardonForm(const PresidentialPardonForm &src);
+	~PresidentialPardonForm();
 
-	ShrubberyCreationForm &operator=(const ShrubberyCreationForm &rhs);
+	PresidentialPardonForm &operator=(const PresidentialPardonForm &rhs);
 
 protected:
 	void Action() const;
 
 private:
 	std::string _target;
-
-	ShrubberyCreationForm();
+	PresidentialPardonForm();
 };
