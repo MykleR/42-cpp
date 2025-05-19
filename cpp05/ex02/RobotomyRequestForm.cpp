@@ -1,0 +1,45 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mykle <mykle@42angouleme.fr>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/05/19 14:11:11 by mykle             #+#    #+#             */
+/*   Updated: 2025/05/19 15:03:07 by mykle            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "RobotomyRequestForm.hpp"
+
+RobotomyRequestForm::RobotomyRequestForm() :
+	AForm("Robotomy Request Form", 72, 45), _target("Default") {}
+
+RobotomyRequestForm::RobotomyRequestForm(std::string target) :
+	AForm("Robotomy Request Form", 72, 45), _target(target) {}
+
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &src) :
+	AForm(src), _target(src._target) {}
+
+RobotomyRequestForm::~RobotomyRequestForm() {}
+
+RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &rhs)
+{
+	if (this != &rhs)
+	{
+		AForm::operator=(rhs);
+		_target = rhs._target;
+	}
+	return *this;
+}
+
+void RobotomyRequestForm::Action() const
+{
+	srand(time(0));
+	float random = static_cast<float>(rand()) / static_cast<float>(RAND_MAX);
+	std::cout << "Makes some drilling noises" << std::endl;
+	if (random < 0.5)
+		std::cout << "The robotomy of " << this->_target << " has been successful." << std::endl;
+	else
+		std::cout << "The robotomy of " << this->_target << " has failed." << std::endl;
+}
