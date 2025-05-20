@@ -6,7 +6,7 @@
 /*   By: mykle <mykle@42angouleme.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 14:11:11 by mykle             #+#    #+#             */
-/*   Updated: 2025/05/19 15:03:07 by mykle            ###   ########.fr       */
+/*   Updated: 2025/05/20 19:40:30 by mrouves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,9 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &r
 
 void RobotomyRequestForm::Action() const
 {
-	srand(time(0));
-	float random = static_cast<float>(rand()) / static_cast<float>(RAND_MAX);
-	std::cout << "Makes some drilling noises" << std::endl;
-	if (random < 0.5)
+	std::srand(time(NULL));
+	std::cout << "Brrrrrrrzzzzt... *drilling noises*" << std::endl;
+	if (std::rand() % 2)
 		std::cout << "The robotomy of " << this->_target << " has been successful." << std::endl;
 	else
 		std::cout << "The robotomy of " << this->_target << " has failed." << std::endl;
