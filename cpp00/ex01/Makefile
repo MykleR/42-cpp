@@ -6,7 +6,7 @@
 #    By: mrouves <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 18:27:35 by mrouves           #+#    #+#              #
-#    Updated: 2025/04/07 16:56:21 by mrouves          ###   ########.fr        #
+#    Updated: 2025/05/26 17:26:51 by mrouves          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ DIR_OBJS		:= .objs
 
 OBJS			:= $(addprefix $(DIR_OBJS)/, $(SOURCES:%.cpp=%.o))
 
-CC				:= g++
+CC				:= c++
 CPPFLAGS		:= -Wall -Wextra -Werror -std=c++98
 LDFLAGS			:= -Wall -Wextra -Werror -std=c++98
 LDLIBS			:= -I $(DIR_HEADERS)

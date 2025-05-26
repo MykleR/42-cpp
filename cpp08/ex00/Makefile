@@ -6,14 +6,13 @@
 #    By: mrouves <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 18:27:35 by mrouves           #+#    #+#              #
-#    Updated: 2025/05/26 17:27:00 by mrouves          ###   ########.fr        #
+#    Updated: 2025/05/26 11:43:12 by mykle            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 			:= tests
+NAME 			:= ex00
 
-SOURCES			:= tests.cpp \
-				Account.cpp \
+SOURCES			:= main.cpp \
 
 DIR_HEADERS		:= .
 DIR_SOURCES		:= .
