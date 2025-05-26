@@ -6,13 +6,12 @@
 /*   By: mykle <mykle@42angouleme.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 21:41:04 by mykle             #+#    #+#             */
-/*   Updated: 2025/05/19 22:51:44 by mykle            ###   ########.fr       */
+/*   Updated: 2025/05/26 11:01:40 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 #include <cctype>
-#include <cstdint>
 #include <limits>
 #include <sstream>
 #include <string>
@@ -70,10 +69,10 @@ template <typename T> void convertToInt(T value) {
 
 template <typename T> T strToType(const std::string &str)
 {
-  std::stringstream ss(str);
-  T result;
-  ss >> result;
-  return result;
+	std::stringstream ss(str);
+	T result;
+	ss >> result;
+	return result;
 }
 
 template <> char strToType<char>(const std::string &str) { return (str[0]); }
@@ -105,11 +104,11 @@ ScalarType getStringType(const std::string &str) {
 }
 
 template <typename T> void __convert(const std::string &str) {
-  T value = strToType<T>(str);
-  convertToChar(value);
-  convertToInt(value);
-  convertToFloat(value);
-  convertToDouble(value);
+	T value = strToType<T>(str);
+	convertToChar(value);
+	convertToInt(value);
+	convertToFloat(value);
+	convertToDouble(value);
 }
 
 void __convert_unknow(const std::string &str) {
