@@ -6,7 +6,7 @@
 /*   By: mrouves <mrouves@42angouleme.fr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/26 15:55:45 by mrouves           #+#    #+#             */
-/*   Updated: 2025/05/26 16:33:11 by mrouves          ###   ########.fr       */
+/*   Updated: 2025/05/26 17:54:05 by mrouves          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main (void)
 	vec.push_back(5);
 
 	try {
-		std::vector<int>::iterator it = easyfind(vec, 3);
+		std::vector<int>::iterator it = easyfind<std::vector<int>>(vec, 3);
 		std::cout << "Found value: " << *it << std::endl;
 	} catch (const std::runtime_error &e) {
 		std::cerr << e.what() << std::endl;
