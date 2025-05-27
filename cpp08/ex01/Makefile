@@ -6,13 +6,14 @@
 #    By: mrouves <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 18:27:35 by mrouves           #+#    #+#              #
-#    Updated: 2025/05/26 17:55:15 by mrouves          ###   ########.fr        #
+#    Updated: 2025/05/27 10:34:19 by mykle            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME 			:= ex01
 
 SOURCES			:= main.cpp \
+				   Span.cpp
 
 DIR_HEADERS		:= .
 DIR_SOURCES		:= .
