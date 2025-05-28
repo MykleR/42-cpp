@@ -6,18 +6,14 @@
 /*   By: mykle <mykle@42angouleme.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 18:48:24 by mykle             #+#    #+#             */
-/*   Updated: 2025/05/28 19:01:13 by mykle            ###   ########.fr       */
+/*   Updated: 2025/05/28 19:02:30 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RPN.hpp"
-#include <ctype.h>
 #include <iostream>
 #include <stack>
 #include <stdexcept>
-#include <stdint.h>
-#include <sys/ioctl.h>
-#include <unistd.h>
 
 static int rpn_mult(int nb1, int nb2) { return nb1 * nb2; }
 static int rpn_sub(int nb1, int nb2) { return nb1 - nb2; }
