@@ -6,7 +6,7 @@
 /*   By: mykle <mykle@42angouleme.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 21:06:57 by mykle             #+#    #+#             */
-/*   Updated: 2025/05/28 21:14:19 by mykle            ###   ########.fr       */
+/*   Updated: 2025/05/29 00:03:52 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,67 +19,48 @@
 template<typename Container>
 class PmergeMe {
 private:
-    using value_type = typename Container::value_type;
-    
-    struct Pair {
+	typedef typename Container::value_type value_type; 
+    typedef struct s_pair {
         value_type larger;
         value_type smaller;
         size_t originalIndex;
-    };
+    } Pair;
     
-    static std::vector<size_t> generateJacobsthal(size_t n) {
+    static std::vector<size_t> generateJacobsthal(size_t n)
+	{
         std::vector<size_t> sequence;
-        if (n == 0) return sequence;
-        
-        sequence.push_back(1);
-        if (n == 1) return sequence;
-        
+        sequence.push_back(0);
+        sequence.push_back(1); 
         size_t prev = 0, curr = 1;
         while (curr < n) {
-            size_t next = curr + 2 * prev;
-            if (next > n) break;
-            sequence.push_back(next);
+            sequence.push_back(curr);
             prev = curr;
-            curr = next;
+            curr = curr + 2 * prev;
         }
         return sequence;
     }
     
-    static size_t binaryInsertPos(const Container& sorted, const value_type& value, size_t limit) {
-        size_t left = 0;
-        size_t right = std::min(limit, sorted.size());
+    static size_t binaryInsertPos(const Container& sorted, const value_type& value, size_t limit)
+	{
+        size_t left=0, right=std::min(limit, sorted.size());
         
         while (left < right) {
             size_t mid = left + (right - left) / 2;
-            if (sorted[mid] < value) {
-                left = mid + 1;
-            } else {
-                right = mid;
-            }
+			left = (sorted[mid] < value) ? mid + 1 : left;
+			right = (sorted[mid] < value) ? right : mid;
         }
         return left;
     }
-    
-    static Container fordJohnsonSort(const Container& input) {
-        size_t n = input.size();
-        
-        if (n <= 1) {
-            return input;
-        }
-        
-        if (n == 2) {
-            Container result = input;
-            if (result[0] > result[1]) {
-                std::swap(result[0], result[1]);
-            }
-            return result;
-        }
+
+	static Container fordJohnsonSort(const Container& input)
+	{
+        if (input.size() <= 1) return input;
         
         std::vector<Pair> pairs;
         value_type straggler;
-        bool hasStraggler = (n % 2 == 1);
+        bool hasStraggler = (input.size() % 2 == 1);
         
-        for (size_t i = 0; i < n / 2; ++i) {
+        for (size_t i = 0; i < input.size() / 2; ++i) {
             Pair p;
             if (input[i * 2] > input[i * 2 + 1]) {
                 p.larger = input[i * 2];
@@ -92,9 +73,8 @@ private:
             pairs.push_back(p);
         }
         
-        if (hasStraggler) {
-            straggler = input[n - 1];
-        }
+        if (hasStraggler)
+            straggler = input[input.size() - 1];
         
         Container winners;
         for (size_t i = 0; i < pairs.size(); ++i) {
