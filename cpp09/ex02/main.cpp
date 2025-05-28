@@ -6,7 +6,7 @@
 /*   By: mykle <mykle@42angouleme.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 21:03:41 by mykle             #+#    #+#             */
-/*   Updated: 2025/05/28 21:03:47 by mykle            ###   ########.fr       */
+/*   Updated: 2025/05/29 01:02:31 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ void testSort(Container& container, const std::string& containerType) {
     Container sorted = PmergeMe<Container>::sort(container);
     auto end = std::chrono::high_resolution_clock::now();
     
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+    auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start); // Convert to microseconds
     
     std::cout << "Time to process a range of " << container.size() 
               << " elements with " << containerType << ": " 
-              << duration.count() << " us" << std::endl;
+              << duration.count() / 1000.0 << " us" << std::endl;
     
     printContainer(sorted, "After:  ");
 }
