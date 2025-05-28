@@ -6,7 +6,7 @@
 /*   By: mykle <mykle@42angouleme.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 18:48:24 by mykle             #+#    #+#             */
-/*   Updated: 2025/05/28 19:02:30 by mykle            ###   ########.fr       */
+/*   Updated: 2025/05/28 19:36:13 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@ static void rpn_sign(const char *str, std::stack<int> &stack, int sign(int, int)
     int b = stack.top(); stack.pop();
     int a = stack.top(); stack.pop();
     stack.push(sign(a, b));
-    if (*(++str) != ' ' && *str != 0)
-        throw std::runtime_error("invalid formating");
 }
 
 static void _action(const char *index, std::stack<int> &stack)
