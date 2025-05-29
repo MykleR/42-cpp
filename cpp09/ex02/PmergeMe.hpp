@@ -6,7 +6,7 @@
 /*   By: mykle <mykle@42angouleme.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/28 21:06:57 by mykle             #+#    #+#             */
-/*   Updated: 2025/05/29 13:17:12 by mykle            ###   ########.fr       */
+/*   Updated: 2025/05/29 13:36:04 by mykle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -218,5 +218,3 @@ void PmergeMe<Container>::insertRemaining(Container& main, const std::vector<Pai
 		}
 	}
 }
-
-
